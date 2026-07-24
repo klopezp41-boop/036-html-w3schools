@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Imágenes en HTML</title>
+</head>
+<body>
+
+<h2>Sintaxis básica: src y alt</h2>
+<img src="https://www.w3schools.com/html/img_chania.jpg" alt="Flores en Chania">
+
+<h2>Tamaño de imagen</h2>
+<h3>Con el atributo style</h3>
+<img src="https://www.w3schools.com/html/img_girl.jpg" alt="Chica con chaqueta" style="width:200px;height:240px;">
+
+<h3>Con los atributos width y height</h3>
+<img src="https://www.w3schools.com/html/img_girl.jpg" alt="Chica con chaqueta" width="200" height="240">
+
+<h2>Imagen en otro servidor (URL absoluta)</h2>
+<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+
+<h2>Imagen como enlace</h2>
+<a href="01-introduccion.html">
+  <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Ir a introducción" style="width:60px;height:72px;">
+</a>
+
+<h2>Imagen flotante</h2>
+<p><img src="https://www.w3schools.com/html/img_girl.jpg" alt="Chica con chaqueta" style="float:right;width:80px;height:96px;">
+La imagen flota a la derecha del texto.</p>
+
+<p><img src="https://www.w3schools.com/html/img_girl.jpg" alt="Chica con chaqueta" style="float:left;width:80px;height:96px;">
+La imagen flota a la izquierda del texto.</p>
+<div style="clear:both;"></div>
+
+<h2>Mapas de imagen (Image Maps)</h2>
+<p>Un mapa de imagen permite definir áreas clicables dentro de una misma imagen.</p>
+<img src="https://www.w3schools.com/html/img_workplace.jpg" alt="Lugar de trabajo" usemap="#workmap" style="width:400px;">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computadora" href="https://www.w3schools.com/html/">
+  <area shape="rect" coords="290,172,333,250" alt="Teléfono" href="https://www.w3schools.com/html/">
+  <area shape="circle" coords="337,300,44" alt="Café" href="https://www.w3schools.com/html/">
+</map>
+
+<h2>Imágenes de fondo (Background Images)</h2>
+<h3>En un elemento con style</h3>
+<p style="background-image: url('https://www.w3schools.com/html/img_girl.jpg'); color:white; padding:40px;">Este párrafo tiene una imagen de fondo.</p>
+
+<h3>Repetición del fondo</h3>
+<style>
+.fondo-repetido {
+  background-image: url('https://www.w3schools.com/html/img_girl.jpg');
+  color: white;
+  padding: 10px;
+}
+.fondo-sin-repetir {
+  background-image: url('https://www.w3schools.com/html/img_girl.jpg');
+  background-repeat: no-repeat;
+  color: white;
+  padding: 10px;
+}
+</style>
+<p class="fondo-repetido">Fondo repetido (comportamiento por defecto).</p>
+<p class="fondo-sin-repetir">Fondo sin repetir (background-repeat: no-repeat).</p>
+
+<h3>Fondo tipo "cover"</h3>
+<style>
+.fondo-cover {
+  background-image: url('https://www.w3schools.com/html/img_girl.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 40px;
+}
+</style>
+<p class="fondo-cover">El fondo cubre todo el elemento sin deformarse.</p>
+
+<h3>Fondo estirado ("stretch")</h3>
+<style>
+.fondo-stretch {
+  background-image: url('https://www.w3schools.com/html/img_girl.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
+  padding: 40px;
+}
+</style>
+<p class="fondo-stretch">El fondo se estira para cubrir todo el elemento.</p>
+
+<h2>El elemento &lt;picture&gt;</h2>
+<p>Permite mostrar distintas imágenes según el tamaño de pantalla o dispositivo.</p>
+<picture>
+  <source media="(min-width: 650px)" srcset="https://www.w3schools.com/html/img_food.jpg">
+  <source media="(min-width: 465px)" srcset="https://www.w3schools.com/html/img_car.jpg">
+  <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Imagen por defecto" style="width:300px;">
+</picture>
+
+<h3>Soporte de formatos con &lt;picture&gt;</h3>
+<picture>
+  <source srcset="https://www.w3schools.com/html/img_girl.jpg">
+  <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Imagen alternativa" style="width:auto;">
+</picture>
+
+</body>
+</html>
