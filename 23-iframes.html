@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Iframes en HTML</title>
+</head>
+<body>
+
+<h2>Sintaxis básica</h2>
+<p>Un iframe permite mostrar una página web dentro de otra página web.</p>
+<iframe src="01-introduccion.html" title="Ejemplo de iframe"></iframe>
+
+<h2>Tamaño del iframe (height y width)</h2>
+<p>Se puede especificar el tamaño con los atributos height y width:</p>
+<iframe src="01-introduccion.html" height="200" width="300" title="Ejemplo de iframe"></iframe>
+
+<h3>Tamaño con CSS (style)</h3>
+<iframe src="01-introduccion.html" style="height:200px;width:300px" title="Ejemplo de iframe"></iframe>
+
+<h2>Quitar el borde del iframe</h2>
+<iframe src="01-introduccion.html" style="border:none;" title="Ejemplo de iframe"></iframe>
+
+<h3>Borde personalizado</h3>
+<iframe src="01-introduccion.html" style="border:2px solid red;" title="Ejemplo de iframe"></iframe>
+
+<h2>Iframe como destino de un enlace (target)</h2>
+<iframe src="01-introduccion.html" name="iframe_a" height="300px" width="100%" title="Ejemplo de iframe"></iframe>
+<p><a href="15-images.html" target="iframe_a">Ir a la lección de imágenes</a></p>
+<p>Cuando el atributo target de un enlace coincide con el name del iframe, el enlace se abre dentro de ese iframe.</p>
+
+</body>
+</html>
