@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Atributo class en HTML</title>
+</head>
+<body>
+
+<h2>Atributo class básico</h2>
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+</style>
+<div class="city">
+  <h3>Londres</h3>
+  <p>Londres es la capital de Inglaterra.</p>
+</div>
+<div class="city">
+  <h3>París</h3>
+  <p>París es la capital de Francia.</p>
+</div>
+<div class="city">
+  <h3>Tokio</h3>
+  <p>Tokio es la capital de Japón.</p>
+</div>
+
+<h3>Class en elementos span</h3>
+<style>
+.note {
+  font-size: 120%;
+  color: red;
+}
+</style>
+<h1>Mi Encabezado <span class="note">Importante</span></h1>
+<p>Este es un texto <span class="note">importante</span>.</p>
+
+<h2>Sintaxis de una clase</h2>
+<style>
+.ciudad {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+</style>
+<p>Uso de CSS para estilizar elementos con la clase "ciudad":</p>
+<h3 class="ciudad">Londres</h3>
+<p>Londres es la capital de Inglaterra.</p>
+<h3 class="ciudad">París</h3>
+<p>París es la capital de Francia.</p>
+<h3 class="ciudad">Tokio</h3>
+<p>Tokio es la capital de Japón.</p>
+
+<h2>Múltiples clases</h2>
+<style>
+.destacado {
+  text-align: center;
+}
+</style>
+<p>Aquí los tres encabezados pertenecen a la clase "ciudad". Además, Londres también pertenece a la clase "destacado", que centra el texto.</p>
+<h3 class="ciudad destacado">Londres</h3>
+<h3 class="ciudad">París</h3>
+<h3 class="ciudad">Tokio</h3>
+
+<h2>Distintos elementos compartiendo la misma clase</h2>
+<p>Aunque no tengan la misma etiqueta, ambos elementos pueden usar la misma clase y compartir el mismo estilo:</p>
+<h3 class="ciudad">París</h3>
+<p class="ciudad">París es la capital de Francia.</p>
+
+<h2>Uso de class con JavaScript</h2>
+<p>Haz clic en el botón para ocultar todos los elementos con la clase "ciudad":</p>
+<button onclick="ocultarCiudades()">Ocultar elementos</button>
+<h3 class="ciudad">Londres</h3>
+<p>Londres es la capital de Inglaterra.</p>
+<h3 class="ciudad">París</h3>
+<p>París es la capital de Francia.</p>
+<h3 class="ciudad">Tokio</h3>
+<p>Tokio es la capital de Japón.</p>
+
+<script>
+function ocultarCiudades() {
+  var elementos = document.getElementsByClassName("ciudad");
+  for (var i = 0; i < elementos.length; i++) {
+    elementos[i].style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
