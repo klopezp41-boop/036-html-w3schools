@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>JavaScript en HTML</title>
+</head>
+<body>
+
+<h2>Primer ejemplo de JavaScript</h2>
+<button type="button" onclick="document.getElementById('demo1').innerHTML = Date()">
+Haz clic para mostrar la fecha y hora.</button>
+<p id="demo1"></p>
+
+<h2>La etiqueta script</h2>
+<p>El elemento <code>&lt;script&gt;</code> se usa para definir un script del lado del cliente (JavaScript). Normalmente se usa el método <code>document.getElementById()</code> para seleccionar un elemento HTML.</p>
+<p id="demo2"></p>
+<script>
+document.getElementById("demo2").innerHTML = "¡Hola JavaScript!";
+</script>
+
+<h2>JavaScript puede cambiar el contenido</h2>
+<button type="button" onclick="cambiarContenido()">Haz clic aquí</button>
+<p id="demo3">Esto es una demostración.</p>
+<script>
+function cambiarContenido() {
+  document.getElementById("demo3").innerHTML = "¡Hola JavaScript!";
+}
+</script>
+
+<h2>JavaScript puede cambiar estilos</h2>
+<p id="demo4">JavaScript puede cambiar el estilo de un elemento HTML.</p>
+<script>
+function cambiarEstilo() {
+  document.getElementById("demo4").style.fontSize = "25px";
+  document.getElementById("demo4").style.color = "red";
+  document.getElementById("demo4").style.backgroundColor = "yellow";
+}
+</script>
+<button type="button" onclick="cambiarEstilo()">Haz clic aquí</button>
+
+<h2>JavaScript puede cambiar atributos</h2>
+<p>Aquí, JavaScript cambia el valor del atributo src (fuente) de una imagen.</p>
+<script>
+function luz(estado) {
+  var imagen;
+  if (estado == 0) {
+    imagen = "https://www.w3schools.com/html/pic_bulboff.gif";
+  } else {
+    imagen = "https://www.w3schools.com/html/pic_bulbon.gif";
+  }
+  document.getElementById('miImagen').src = imagen;
+}
+</script>
+<img id="miImagen" src="https://www.w3schools.com/html/pic_bulboff.gif" width="100" height="180">
+<p>
+<button type="button" onclick="luz(1)">Encender</button>
+<button type="button" onclick="luz(0)">Apagar</button>
+</p>
+
+<h2>La etiqueta noscript</h2>
+<p id="demo5"></p>
+<script>
+document.getElementById("demo5").innerHTML = "¡Hola JavaScript!";
+</script>
+<noscript>Lo sentimos, tu navegador no soporta JavaScript.</noscript>
+<p>Un navegador sin soporte para JavaScript mostrará el texto escrito dentro del elemento noscript.</p>
+
+</body>
+</html>
