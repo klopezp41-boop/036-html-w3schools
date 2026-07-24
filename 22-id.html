@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Atributo id en HTML</title>
+</head>
+<body>
+
+<h2>Atributo id básico</h2>
+<style>
+#miEncabezado {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+</style>
+<p>Uso de CSS para estilizar un elemento con el id "miEncabezado":</p>
+<h1 id="miEncabezado">Mi Encabezado</h1>
+
+<h2>Diferencia entre class e id</h2>
+<style>
+#miEncabezado2 {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+.ciudad {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+</style>
+<p>Un nombre de clase puede usarse en varios elementos, mientras que un id debe ser único en toda la página:</p>
+<h1 id="miEncabezado2">Mis Ciudades</h1>
+<h3 class="ciudad">Londres</h3>
+<p>Londres es la capital de Inglaterra.</p>
+<h3 class="ciudad">París</h3>
+<p>París es la capital de Francia.</p>
+<h3 class="ciudad">Tokio</h3>
+<p>Tokio es la capital de Japón.</p>
+
+<h2>Marcadores (bookmarks) con id y enlaces</h2>
+<p><a href="#capitulo4">Ir al Capítulo 4</a></p>
+<p><a href="#capitulo8">Ir al Capítulo 8</a></p>
+
+<h3>Capítulo 1</h3>
+<p>Este capítulo explica bla bla bla.</p>
+<h3>Capítulo 2</h3>
+<p>Este capítulo explica bla bla bla.</p>
+<h3>Capítulo 3</h3>
+<p>Este capítulo explica bla bla bla.</p>
+<h3 id="capitulo4">Capítulo 4</h3>
+<p>Este capítulo explica bla bla bla.</p>
+<h3>Capítulo 5</h3>
+<p>Este capítulo explica bla bla bla.</p>
+<h3>Capítulo 6</h3>
+<p>Este capítulo explica bla bla bla.</p>
+<h3>Capítulo 7</h3>
+<p>Este capítulo explica bla bla bla.</p>
+<h3 id="capitulo8">Capítulo 8</h3>
+<p>Este capítulo explica bla bla bla.</p>
+
+<h2>Uso del atributo id en JavaScript</h2>
+<p>JavaScript puede acceder a un elemento con un id específico usando el método getElementById():</p>
+<h1 id="miSaludo">¡Hola Mundo!</h1>
+<button onclick="cambiarTexto()">Cambiar texto</button>
+
+<script>
+function cambiarTexto() {
+  document.getElementById("miSaludo").innerHTML = "¡Que tengas un buen día!";
+}
+</script>
+
+</body>
+</html>
