@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Enlaces en HTML</title>
+</head>
+<body>
+
+<h2>Sintaxis básica</h2>
+<a href="https://www.w3schools.com/">Visita W3Schools.com!</a>
+
+<h2>Atributo target</h2>
+<p><a href="https://www.w3schools.com/" target="_blank">Visita W3Schools (en una pestaña nueva)</a></p>
+
+<h2>URLs absolutas</h2>
+<p><a href="https://www.w3.org/">W3C</a></p>
+<p><a href="https://www.google.com/">Google</a></p>
+
+<h2>URLs relativas</h2>
+<p><a href="01-introduccion.html">Ir a la lección de introducción</a></p>
+<p><a href="https://www.w3schools.com/css/default.asp">CSS Tutorial</a></p>
+
+<h2>Imagen como enlace</h2>
+<a href="01-introduccion.html">
+<img src="smiley.gif" alt="Tutorial de HTML" style="width:42px;height:42px;">
+</a>
+
+<h2>Enlace a un correo electrónico</h2>
+<a href="mailto:alguien@ejemplo.com">Enviar correo</a>
+
+<h2>Botón como enlace</h2>
+<button onclick="document.location='01-introduccion.html'">Ir a la lección de introducción</button>
+
+<h2>Título del enlace (tooltip)</h2>
+<a href="https://www.w3schools.com/html/" title="Ir a la sección de HTML de W3Schools">Visita nuestro Tutorial de HTML</a>
+
+<h2>Colores de los enlaces</h2>
+<style>
+.colores a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+.colores a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+.colores a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.colores a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+<p class="colores"><a href="https://www.w3schools.com/">Enlace con colores personalizados</a></p>
+
+<h2>Enlace como botón</h2>
+<style>
+.boton a:link, .boton a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.boton a:hover, .boton a:active {
+  background-color: red;
+}
+</style>
+<p class="boton"><a href="https://www.w3schools.com/">Este es un enlace</a></p>
+
+<h2>Marcadores (bookmarks)</h2>
+<p><a href="#capitulo4">Ir al Capítulo 4</a></p>
+
+<!-- ... contenido intermedio de la página ... -->
+
+<h2 id="capitulo4">Capítulo 4</h2>
+<p>Este es el contenido del capítulo al que llega el marcador.</p>
+
+</body>
+</html>
