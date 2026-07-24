@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Rutas de Archivo en HTML</title>
+</head>
+<body>
+
+<h2>Ruta absoluta (Absolute File Path)</h2>
+<p>Una ruta absoluta es la URL completa hacia un archivo.</p>
+<img src="https://www.w3schools.com/html/img_girl.jpg" alt="Montaña" style="width:300px">
+
+<h2>Ruta relativa (Relative File Path)</h2>
+<p>Una ruta relativa apunta a un archivo en relación con la ubicación de la página actual. A continuación, algunos ejemplos de cómo se escribiría cada caso (no se muestran imágenes reales porque dependen de la estructura de carpetas del propio proyecto):</p>
+
+<table style="border-collapse:collapse;">
+  <tr>
+    <th style="border:1px solid black; padding:8px;">Ruta</th>
+    <th style="border:1px solid black; padding:8px;">Descripción</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;"><code>&lt;img src="imagen.jpg"&gt;</code></td>
+    <td style="border:1px solid black; padding:8px;">El archivo está en la misma carpeta que la página actual</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;"><code>&lt;img src="images/imagen.jpg"&gt;</code></td>
+    <td style="border:1px solid black; padding:8px;">El archivo está en la carpeta "images" dentro de la carpeta actual</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;"><code>&lt;img src="/images/imagen.jpg"&gt;</code></td>
+    <td style="border:1px solid black; padding:8px;">El archivo está en la carpeta "images" ubicada en la raíz del sitio</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;"><code>&lt;img src="../imagen.jpg"&gt;</code></td>
+    <td style="border:1px solid black; padding:8px;">El archivo está en la carpeta un nivel arriba de la actual</td>
+  </tr>
+</table>
+
+<h3>Ejemplo funcional de ruta relativa (dentro de este repositorio)</h3>
+<p>Enlace a otro archivo de este mismo repositorio, usando ruta relativa:</p>
+<a href="01-introduccion.html">Ir a la lección de introducción</a>
+
+<h2>Buena práctica</h2>
+<p>Se recomienda usar rutas relativas siempre que sea posible. Así, las páginas no dependen de la URL base y funcionan igual en local (localhost) como en un dominio público.</p>
+
+</body>
+</html>
