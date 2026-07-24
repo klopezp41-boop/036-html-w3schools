@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Estilos CSS en HTML</title>
+</head>
+<body>
+
+<h2>CSS en línea (inline)</h2>
+<h1 style="color:blue;">Un encabezado azul</h1>
+<p style="color:red;">Un párrafo rojo.</p>
+
+<h2>CSS interno</h2>
+<style>
+  .interno h1 {color: blue;}
+  .interno p {color: red;}
+  .interno {background-color: powderblue;}
+</style>
+<div class="interno">
+  <h1>Este es un encabezado</h1>
+  <p>Este es un párrafo.</p>
+</div>
+
+<h2>CSS externo</h2>
+<p>Así se enlaza un archivo CSS externo desde el <code>&lt;head&gt;</code>:</p>
+<p><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></p>
+
+<h2>Color, fuente y tamaño de texto</h2>
+<style>
+  .demo-texto h1 {
+    color: blue;
+    font-family: verdana;
+    font-size: 300%;
+  }
+  .demo-texto p {
+    color: red;
+    font-family: courier;
+    font-size: 160%;
+  }
+</style>
+<div class="demo-texto">
+  <h1>Este es un encabezado</h1>
+  <p>Este es un párrafo.</p>
+</div>
+
+<h2>Border (borde)</h2>
+<p style="border: 2px solid powderblue;">Este párrafo tiene un borde.</p>
+
+<h2>Padding (espacio interno)</h2>
+<p style="border: 2px solid powderblue; padding: 30px;">Este párrafo tiene borde y padding.</p>
+
+<h2>Margin (espacio externo)</h2>
+<p style="border: 2px solid powderblue; margin: 50px;">Este párrafo tiene borde y margin.</p>
+
+</body>
+</html>
