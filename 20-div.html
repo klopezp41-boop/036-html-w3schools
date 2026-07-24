@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>El Elemento Div en HTML</title>
+</head>
+<body>
+
+<h2>El elemento div como contenedor</h2>
+<p>El <code>&lt;div&gt;</code> es un elemento de bloque que ocupa todo el ancho disponible por defecto. Se usa para agrupar secciones de una página.</p>
+<div style="background-color:#fff3a3; padding:15px;">
+  <h3>Londres</h3>
+  <p>Londres es la capital de Inglaterra.</p>
+  <p>Londres tiene más de 9 millones de habitantes.</p>
+</div>
+
+<h2>Centrar un div</h2>
+<style>
+.centrado {
+  width: 300px;
+  margin: auto;
+  background-color: #fff3a3;
+  padding: 15px;
+}
+</style>
+<div class="centrado">
+  <h3>Londres</h3>
+  <p>Londres es la capital de Inglaterra.</p>
+  <p>Londres tiene más de 9 millones de habitantes.</p>
+</div>
+
+<h2>Múltiples divs</h2>
+<div style="background-color:#fff3a3; padding:15px; margin-bottom:10px;">
+  <h3>Londres</h3>
+  <p>Londres es la capital de Inglaterra.</p>
+  <p>Londres tiene más de 9 millones de habitantes.</p>
+</div>
+<div style="background-color:#ffc0cb; padding:15px; margin-bottom:10px;">
+  <h3>Oslo</h3>
+  <p>Oslo es la capital de Noruega.</p>
+  <p>Oslo tiene más de 700,000 habitantes.</p>
+</div>
+<div style="background-color:#d9f2df; padding:15px; margin-bottom:10px;">
+  <h3>Roma</h3>
+  <p>Roma es la capital de Italia.</p>
+  <p>Roma tiene más de 4 millones de habitantes.</p>
+</div>
+
+<h2>Alinear divs uno al lado del otro</h2>
+
+<h3>Con float</h3>
+<style>
+div.mycontainer {
+  width: 100%;
+  overflow: auto;
+}
+div.mycontainer div {
+  width: 33%;
+  float: left;
+}
+</style>
+<div class="mycontainer">
+  <div style="background-color:#FFF4A3;">
+    <h2>Londres</h2>
+    <p>Londres es la capital de Inglaterra.</p>
+    <p>Londres tiene más de 9 millones de habitantes.</p>
+  </div>
+
+  <div style="background-color:#FFC0C7;">
+    <h2>Oslo</h2>
+    <p>Oslo es la capital de Noruega.</p>
+    <p>Oslo tiene más de 700,000 habitantes.</p>
+  </div>
+
+  <div style="background-color:#D9EEE1;">
+    <h2>Roma</h2>
+    <p>Roma es la capital de Italia.</p>
+    <p>Roma tiene más de 4 millones de habitantes.</p>
+  </div>
+</div>
+
+<h3>Con inline-block</h3>
+<style>
+.contenedor-inline div {
+  width: 30%;
+  display: inline-block;
+}
+</style>
+<div class="contenedor-inline">
+  <div style="background-color:#FFF4A3;">
+    <h2>Londres</h2>
+    <p>Londres es la capital de Inglaterra.</p>
+    <p>Londres tiene más de 9 millones de habitantes.</p>
+  </div>
+  <div style="background-color:#FFC0C7;">
+    <h2>Oslo</h2>
+    <p>Oslo es la capital de Noruega.</p>
+    <p>Oslo tiene más de 700,000 habitantes.</p>
+  </div>
+  <div style="background-color:#D9EEE1;">
+    <h2>Roma</h2>
+    <p>Roma es la capital de Italia.</p>
+    <p>Roma tiene más de 4 millones de habitantes.</p>
+  </div>
+</div>
+
+<h3>Con flex</h3>
+<style>
+.mycontainer-flex {
+  display: flex;
+}
+.mycontainer-flex > div {
+  width: 33%;
+}
+</style>
+<p>Alinea tres elementos DIV uno al lado del otro.</p>
+<div class="mycontainer-flex">
+  <div style="background-color:#FFF4A3;">
+    <h2>Londres</h2>
+    <p>Londres es la capital de Inglaterra.</p>
+    <p>Londres tiene más de 9 millones de habitantes.</p>
+  </div>
+
+  <div style="background-color:#FFC0C7;">
+    <h2>Oslo</h2>
+    <p>Oslo es la capital de Noruega.</p>
+    <p>Oslo tiene más de 700,000 habitantes.</p>
+  </div>
+
+  <div style="background-color:#D9EEE1;">
+    <h2>Roma</h2>
+    <p>Roma es la capital de Italia.</p>
+    <p>Roma tiene más de 4 millones de habitantes.</p>
+  </div>
+</div>
+
+<h3>Con grid</h3>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+</style>
+<p>Alinea tres elementos DIV uno al lado del otro.</p>
+<div class="grid-container">
+  <div style="background-color:#FFF4A3;">
+    <h2>Londres</h2>
+    <p>Londres es la capital de Inglaterra.</p>
+    <p>Londres tiene más de 9 millones de habitantes.</p>
+  </div>
+  <div style="background-color:#FFC0C7;">
+    <h2>Oslo</h2>
+    <p>Oslo es la capital de Noruega.</p>
+    <p>Oslo tiene más de 700,000 habitantes.</p>
+  </div>
+  <div style="background-color:#D9EEE1;">
+    <h2>Roma</h2>
+    <p>Roma es la capital de Italia.</p>
+    <p>Roma tiene más de 4 millones de habitantes.</p>
+  </div>
+</div>
+
+</body>
+</html>
