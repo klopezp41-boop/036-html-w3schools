@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Tablas en HTML</title>
+<style>
+.borde-simple, .borde-simple th, .borde-simple td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Tabla básica</h2>
+<table class="borde-simple">
+  <tr>
+    <th>Compañía</th>
+    <th>Contacto</th>
+    <th>País</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Alemania</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>México</td>
+  </tr>
+</table>
+
+<h3>Celdas (td)</h3>
+<table class="borde-simple">
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+</table>
+
+<h3>Filas (tr)</h3>
+<table class="borde-simple">
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>14</td>
+    <td>10</td>
+  </tr>
+</table>
+
+<h3>Encabezados (th)</h3>
+<table class="borde-simple">
+  <tr>
+    <th>Persona 1</th>
+    <th>Persona 2</th>
+    <th>Persona 3</th>
+  </tr>
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+</table>
+
+<h2>Bordes de tabla</h2>
+<style>
+.tabla-borde, .tabla-borde th, .tabla-borde td {
+  border: 1px solid black;
+}
+.tabla-collapse, .tabla-collapse th, .tabla-collapse td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.tabla-invisible, .tabla-invisible th, .tabla-invisible td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+.tabla-invisible th, .tabla-invisible td {
+  background-color: #96D4D4;
+}
+.tabla-redonda, .tabla-redonda th, .tabla-redonda td {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.tabla-punteada th, .tabla-punteada td {
+  border-style: dotted;
+  border-color: #96D4D4;
+}
+</style>
+
+<h3>Borde simple</h3>
+<table class="tabla-borde">
+  <tr><th>Nombre</th><th>Edad</th></tr>
+  <tr><td>Jill</td><td>50</td></tr>
+</table>
+
+<h3>Bordes colapsados</h3>
+<table class="tabla-collapse">
+  <tr><th>Nombre</th><th>Edad</th></tr>
+  <tr><td>Jill</td><td>50</td></tr>
+</table>
+
+<h3>Borde estilo "invisible"</h3>
+<table class="tabla-invisible">
+  <tr><th>Nombre</th><th>Edad</th></tr>
+  <tr><td>Jill</td><td>50</td></tr>
+</table>
+
+<h3>Bordes redondeados</h3>
+<table class="tabla-redonda">
+  <tr><th>Nombre</th><th>Edad</th></tr>
+  <tr><td>Jill</td><td>50</td></tr>
+</table>
+
+<h3>Bordes punteados y con color</h3>
+<table class="tabla-punteada">
+  <tr><th>Nombre</th><th>Edad</th></tr>
+  <tr><td>Jill</td><td>50</td></tr>
+</table>
+
+<h2>Tamaño de tablas</h2>
+<h3>Ancho de tabla</h3>
+<table class="borde-simple" style="width:100%">
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Edad</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+
+<h3>Ancho de columna</h3>
+<table class="borde-simple" style="width:100%">
+  <tr>
+    <th style="width:70%">Nombre</th>
+    <th>Apellido</th>
+    <th>Edad</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+</table>
+
+<h3>Altura de fila</h3>
+<table class="borde-simple" style="width:100%">
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Edad</th>
+  </tr>
+  <tr style="height:200px">
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+</table>
+
+<h2>Encabezados verticales</h2>
+<table class="borde-simple">
+  <tr>
+    <th>Nombre</th>
+    <td>Jill</td>
+    <td>Eve</td>
+  </tr>
+  <tr>
+    <th>Apellido</th>
+    <td>Smith</td>
+    <td>Jackson</td>
+  </tr>
+</table>
+
+<h3>Alineación de encabezados</h3>
+<style>
+.tabla-izquierda th {
+  text-align: left;
+}
+</style>
+<table class="tabla-izquierda borde-simple">
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Edad</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+</table>
+
+<h3>Encabezado que abarca varias columnas (colspan)</h3>
+<table class="borde-simple">
+  <tr>
+    <th colspan="2">Nombre</th>
+    <th>Edad</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+</table>
+
+<h2>Título de la tabla (caption)</h2>
+<table class="borde-simple" style="width:100%">
+  <caption>Ahorros mensuales</caption>
+  <tr>
+    <th>Mes</th>
+    <th>Ahorro</th>
+  </tr>
+  <tr>
+    <td>Enero</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>Febrero</td>
+    <td>$50</td>
+  </tr>
+</table>
+
+<h2>Padding y espaciado</h2>
+<style>
+.tabla-padding th, .tabla-padding td {
+  padding: 15px;
+  border: 1px solid black;
+}
+.tabla-spacing {
+  border-spacing: 30px;
+}
+.tabla-spacing th, .tabla-spacing td {
+  border: 1px solid black;
+}
+</style>
+
+<h3>Padding en las celdas</h3>
+<table class="tabla-padding">
+  <tr><th>Uno</th><th>Dos</th></tr>
+  <tr><td>Hola</td><td>Hola</td></tr>
+</table>
+
+<h3>Espacio entre celdas (border-spacing)</h3>
+<table class="tabla-spacing">
+  <tr><th>Uno</th><th>Dos</th></tr>
+  <tr><td>Hola</td><td>Hola</td></tr>
+</table>
+
+<h2>Colspan y Rowspan</h2>
+<h3>Colspan (una celda ocupa varias columnas)</h3>
+<table class="borde-simple">
+  <tr>
+    <th colspan="2">Nombre</th>
+    <th>Edad</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>43</td>
+  </tr>
+</table>
+
+<h3>Rowspan (una celda ocupa varias filas)</h3>
+<table class="borde-simple">
+  <tr>
+    <th>Nombre</th>
+    <td>Jill</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Teléfono</th>
+    <td>555-1234</td>
+  </tr>
+  <tr>
+    <td>555-8745</td>
+  </tr>
+</table>
+
+<h2>Estilos de tabla con CSS</h2>
+<style>
+.zebra tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+.zebra-vertical td:nth-child(even),
+.zebra-vertical th:nth-child(even) {
+  background-color: #D6EEEE;
+}
+.divisores tr {
+  border-bottom: 1px solid #ddd;
+}
+.hover tr:hover {
+  background-color: #D6EEEE;
+}
+</style>
+
+<h3>Rayas tipo cebra (filas)</h3>
+<table class="zebra borde-simple">
+  <tr><td>1</td><td>2</td><td>3</td></tr>
+  <tr><td>4</td><td>5</td><td>6</td></tr>
+  <tr><td>7</td><td>8</td><td>9</td></tr>
+</table>
+
+<h3>Rayas tipo cebra (columnas)</h3>
+<table class="zebra-vertical borde-simple">
+  <tr><td>1</td><td>2</td><td>3</td></tr>
+  <tr><td>4</td><td>5</td><td>6</td></tr>
+  <tr><td>7</td><td>8</td><td>9</td></tr>
+</table>
+
+<h3>Divisores horizontales</h3>
+<table class="divisores">
+  <tr><th>Nombre</th><th>Apellido</th><th>Ahorro</th></tr>
+  <tr><td>Peter</td><td>Griffin</td><td>$100</td></tr>
+  <tr><td>Lois</td><td>Griffin</td><td>$150</td></tr>
+</table>
+
+<h3>Tabla con efecto hover</h3>
+<table class="hover borde-simple">
+  <tr><th>Nombre</th><th>Apellido</th><th>Ahorro</th></tr>
+  <tr><td>Peter</td><td>Griffin</td><td>$100</td></tr>
+  <tr><td>Lois</td><td>Griffin</td><td>$150</td></tr>
+</table>
+
+<h2>Colgroup (estilizar columnas completas)</h2>
+<table>
+  <colgroup>
+    <col span="2" style="background-color: #D6EEEE">
+  </colgroup>
+  <tr>
+    <th>LUN</th>
+    <th>MAR</th>
+    <th>MIE</th>
+    <th>JUE</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+</table>
+
+<h3>Varios elementos col con distintos estilos</h3>
+<table class="borde-simple">
+  <colgroup>
+    <col span="2" style="background-color: #D6EEEE">
+    <col span="2" style="background-color: pink">
+  </colgroup>
+  <tr>
+    <th>LUN</th>
+    <th>MAR</th>
+    <th>MIE</th>
+    <th>JUE</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+</table>
+
+<h3>Ocultar columnas</h3>
+<table>
+  <colgroup>
+    <col span="2">
+    <col span="2" style="visibility: collapse">
+  </colgroup>
+  <tr>
+    <th>LUN</th>
+    <th>MAR</th>
+    <th>MIE</th>
+    <th>JUE</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+</table>
+
+</body>
+</html>
