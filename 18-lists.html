@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Listas en HTML</title>
+<style>
+.horizontal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+.horizontal li {
+  float: left;
+}
+.horizontal li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+.horizontal li a:hover {
+  background-color: #111111;
+}
+</style>
+</head>
+<body>
+
+<h2>Lista desordenada (ul)</h2>
+<ul>
+  <li>Café</li>
+  <li>Té</li>
+  <li>Leche</li>
+</ul>
+
+<h3>Marcador tipo disco (por defecto)</h3>
+<ul style="list-style-type:disc;">
+  <li>Café</li>
+  <li>Té</li>
+  <li>Leche</li>
+</ul>
+
+<h3>Marcador tipo círculo</h3>
+<ul style="list-style-type:circle;">
+  <li>Café</li>
+  <li>Té</li>
+  <li>Leche</li>
+</ul>
+
+<h3>Marcador tipo cuadrado</h3>
+<ul style="list-style-type:square;">
+  <li>Café</li>
+  <li>Té</li>
+  <li>Leche</li>
+</ul>
+
+<h3>Sin marcador</h3>
+<ul style="list-style-type:none;">
+  <li>Café</li>
+  <li>Té</li>
+  <li>Leche</li>
+</ul>
+
+<h3>Lista desordenada anidada</h3>
+<ul>
+  <li>Café</li>
+  <li>Té
+    <ul>
+      <li>Té negro</li>
+      <li>Té verde</li>
+    </ul>
+  </li>
+  <li>Leche</li>
+</ul>
+
+<h3>Lista horizontal con CSS (menú de navegación)</h3>
+<ul class="horizontal">
+  <li><a href="#inicio">Inicio</a></li>
+  <li><a href="#noticias">Noticias</a></li>
+  <li><a href="#contacto">Contacto</a></li>
+  <li><a href="#nosotros">Nosotros</a></li>
+</ul>
+
+<h2>Lista ordenada (ol)</h2>
+<ol>
+  <li>Café</li>
+  <li>Té</li>
+  <li>Leche</li>
+</ol>
+
+<h3>Números (type="1")</h3>
+<ol type="1">
+  <li>Café</li>
+  <li>Té</li>
+  <li>Leche</li>
+</ol>
+
+<h3>Letras mayúsculas (type="A")</h3>
+<ol type="A">
+  <li>Café</li>
+  <li>Té</li>
+  <li>Leche</li>
+</ol>
+
+<h3>Letras minúsculas (type="a")</h3>
+<ol type="a">
+  <li>Café</li>
+  <li>Té</li>
+  <li>Leche</li>
+</ol>
+
+<h3>Números romanos mayúsculas (type="I")</h3>
+<ol type="I">
+  <li>Café</li>
+  <li>Té</li>
+  <li>Leche</li>
+</ol>
+
+<h3>Números romanos minúsculas (type="i")</h3>
+<ol type="i">
+  <li>Café</li>
+  <li>Té</li>
+  <li>Leche</li>
+</ol>
+
+<h3>Iniciar el conteo desde otro número (start)</h3>
+<ol start="50">
+  <li>Café</li>
+  <li>Té</li>
+  <li>Leche</li>
+</ol>
+
+<h3>Lista ordenada anidada</h3>
+<ol>
+  <li>Café</li>
+  <li>Té
+    <ol>
+      <li>Té negro</li>
+      <li>Té verde</li>
+    </ol>
+  </li>
+  <li>Leche</li>
+</ol>
+
+<h2>Lista de descripción (dl, dt, dd)</h2>
+<dl>
+  <dt>Café</dt>
+  <dd>- bebida caliente y negra</dd>
+  <dt>Leche</dt>
+  <dd>- bebida fría y blanca</dd>
+</dl>
+
+</body>
+</html>
