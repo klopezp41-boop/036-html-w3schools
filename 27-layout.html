@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Técnicas de Layout en HTML</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- Diagrama de elementos de layout --- */
+.diagrama {
+  max-width: 400px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.diagrama div {
+  border: 1px solid #999;
+  text-align: center;
+  padding: 15px;
+  color: #555;
+  font-family: monospace;
+}
+.diagrama-fila {
+  display: flex;
+}
+.diagrama-fila .diagrama-columna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.diagrama-fila .diagrama-aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Layout con Float --- */
+.float-demo header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+.float-demo nav {
+  float: left;
+  width: 30%;
+  height: 300px;
+  background: #ccc;
+  padding: 20px;
+}
+.float-demo nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+.float-demo article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px;
+}
+.float-demo section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.float-demo footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+@media (max-width: 600px) {
+  .float-demo nav, .float-demo article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* --- Layout con Flexbox --- */
+.flex-demo header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+.flex-demo section {
+  display: flex;
+}
+.flex-demo nav {
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+}
+.flex-demo nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+.flex-demo article {
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+.flex-demo footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+@media (max-width: 600px) {
+  .flex-demo section {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Elementos de layout (semánticos)</h2>
+<p>HTML5 tiene elementos semánticos que definen las distintas partes de una página web:</p>
+
+<div class="diagrama">
+  <div>&lt;header&gt;</div>
+  <div>&lt;nav&gt;</div>
+  <div class="diagrama-fila">
+    <div class="diagrama-columna">
+      <div>&lt;section&gt;</div>
+      <div>&lt;article&gt;</div>
+    </div>
+    <div class="diagrama-aside">&lt;aside&gt;</div>
+  </div>
+  <div>&lt;footer&gt;</div>
+</div>
+
+<ul>
+  <li><b>&lt;header&gt;</b> - Define un encabezado para un documento o sección</li>
+  <li><b>&lt;nav&gt;</b> - Define un conjunto de enlaces de navegación</li>
+  <li><b>&lt;section&gt;</b> - Define una sección dentro de un documento</li>
+  <li><b>&lt;article&gt;</b> - Define contenido independiente y autocontenido</li>
+  <li><b>&lt;aside&gt;</b> - Define contenido aparte del contenido principal (como una barra lateral)</li>
+  <li><b>&lt;footer&gt;</b> - Define un pie de página para un documento o sección</li>
+  <li><b>&lt;details&gt;</b> - Define detalles adicionales que el usuario puede abrir y cerrar</li>
+  <li><b>&lt;summary&gt;</b> - Define un encabezado para el elemento &lt;details&gt;</li>
+</ul>
+
+<h2>Técnicas de layout</h2>
+<p>Existen varias formas de crear diseños de múltiples columnas: frameworks de CSS, la propiedad float, flexbox y grid.</p>
+
+<h3>Layout con float</h3>
+<p>Se puede crear un diseño completo usando la propiedad CSS float. Es fácil de aprender, aunque tiene la desventaja de que los elementos flotantes quedan ligados al flujo del documento.</p>
+
+<div class="float-demo">
+<header>
+  <h2>Ciudades</h2>
+</header>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Londres</a></li>
+      <li><a href="#">París</a></li>
+      <li><a href="#">Tokio</a></li>
+    </ul>
+  </nav>
+  <article>
+    <h1>Londres</h1>
+    <p>Londres es la capital de Inglaterra. Es la ciudad más poblada del Reino Unido, con un área metropolitana de más de 13 millones de habitantes.</p>
+  </article>
+</section>
+<footer>
+  <p>Pie de página</p>
+</footer>
+</div>
+
+<h3>Layout con flexbox</h3>
+<p>Usar flexbox asegura que los elementos se comporten de forma predecible al adaptarse a distintos tamaños de pantalla y dispositivos.</p>
+
+<div class="flex-demo">
+<header>
+  <h2>Ciudades</h2>
+</header>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Londres</a></li>
+      <li><a href="#">París</a></li>
+      <li><a href="#">Tokio</a></li>
+    </ul>
+  </nav>
+  <article>
+    <h1>Londres</h1>
+    <p>Londres es la capital de Inglaterra. Es la ciudad más poblada del Reino Unido, con un área metropolitana de más de 13 millones de habitantes.</p>
+  </article>
+</section>
+<footer>
+  <p>Pie de página</p>
+</footer>
+</div>
+
+</body>
+</html>
