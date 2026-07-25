@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Diseño Web Responsivo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* --- Demo de viewport / imagen responsiva --- */
+.img-responsiva {
+  width: 100%;
+  max-width: 600px;
+}
+.img-max-width {
+  max-width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+
+/* --- Texto responsivo --- */
+.texto-responsivo h1 {
+  font-size: 10vw;
+}
+.texto-responsivo p {
+  font-size: 5vw;
+}
+
+/* --- Media queries: tres columnas --- */
+.mq-demo .left {
+  background-color: #2196F3;
+  color: white;
+  padding: 20px;
+  float: left;
+  width: 20%;
+}
+.mq-demo .main {
+  background-color: #f1f1f1;
+  padding: 20px;
+  float: left;
+  width: 60%;
+}
+.mq-demo .right {
+  background-color: #04AA6D;
+  color: white;
+  padding: 20px;
+  float: left;
+  width: 20%;
+}
+.mq-demo::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 800px) {
+  .mq-demo .left, .mq-demo .main, .mq-demo .right {
+    width: 100%;
+  }
+}
+
+/* --- Página responsiva completa --- */
+.pagina-completa .menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+.pagina-completa .menu a {
+  background-color: #e5e5e5;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+.pagina-completa .main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+}
+.pagina-completa .right {
+  background-color: #e5e5e5;
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}
+.pagina-completa .contenido::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (max-width: 620px) {
+  .pagina-completa .menu, .pagina-completa .main, .pagina-completa .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Configurar el viewport</h2>
+<p>Para crear un sitio responsivo, se agrega la siguiente etiqueta meta en el head de todas las páginas (ya incluida en este archivo):</p>
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+
+<h2>Imágenes responsivas</h2>
+
+<h3>Usando la propiedad width</h3>
+<p>Si el ancho se define en porcentaje, la imagen se agranda y se achica al cambiar el tamaño de la ventana. Nota: puede volverse más grande que su tamaño original.</p>
+<img src="https://www.w3schools.com/html/img_girl.jpg" class="img-responsiva">
+
+<h3>Usando la propiedad max-width</h3>
+<p>Con max-width:100% la imagen se reduce si es necesario, pero nunca crece más allá de su tamaño original.</p>
+<img src="https://www.w3schools.com/html/img_girl.jpg" class="img-max-width">
+
+<h3>Mostrar distintas imágenes según el ancho del navegador</h3>
+<p>El elemento &lt;picture&gt; permite definir distintas imágenes según el tamaño de pantalla. Cambia el ancho de la ventana para ver el efecto:</p>
+<picture>
+  <source srcset="https://www.w3schools.com/html/img_chania.jpg" media="(max-width: 600px)">
+  <source srcset="https://www.w3schools.com/html/img_girl.jpg" media="(max-width: 1500px)">
+  <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Imagen" style="width:auto; max-width:100%;">
+</picture>
+
+<h2>Tamaño de texto responsivo</h2>
+<p>El tamaño de texto se puede definir con la unidad "vw" (viewport width), para que siga el tamaño de la ventana:</p>
+<div class="texto-responsivo">
+  <h1>Texto Responsivo</h1>
+  <p>Cambia el tamaño de la ventana del navegador para ver cómo escala el texto.</p>
+</div>
+
+<h2>Media queries</h2>
+<p>Permiten definir estilos completamente distintos según el tamaño de pantalla. Cambia el ancho de la ventana: las tres columnas se ven horizontales en pantallas grandes y apiladas en pantallas pequeñas (punto de quiebre en 800px):</p>
+<div class="mq-demo">
+  <div class="left">
+    <p>Menú Izquierdo</p>
+  </div>
+  <div class="main">
+    <p>Contenido Principal</p>
+  </div>
+  <div class="right">
+    <p>Contenido Derecho</p>
+  </div>
+</div>
+
+<h2>Ejemplo completo de página responsiva</h2>
+<div class="pagina-completa" style="font-family:Verdana; color:#aaaaaa;">
+  <div style="background-color:#e5e5e5; padding:15px; text-align:center;">
+    <h1>Hola Mundo</h1>
+  </div>
+  <div class="contenido">
+    <div class="menu">
+      <a href="#">Enlace 1</a>
+      <a href="#">Enlace 2</a>
+      <a href="#">Enlace 3</a>
+      <a href="#">Enlace 4</a>
+    </div>
+    <div class="main">
+      <h2>Lorem Ipsum</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+    <div class="right">
+      <h2>Acerca de</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    </div>
+  </div>
+  <div style="background-color:#e5e5e5; text-align:center; padding:10px; margin-top:7px;">© copyright</div>
+</div>
+
+<h2>Frameworks CSS responsivos</h2>
+<p>Los frameworks de CSS más populares (como W3.CSS o Bootstrap) ya traen diseño responsivo por defecto. Son gratuitos y fáciles de usar.</p>
+
+</body>
+</html>
