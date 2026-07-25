@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Elementos de Formulario en HTML</title>
+</head>
+<body>
+
+<h2>Elementos que puede contener un formulario</h2>
+<p>El elemento <code>&lt;form&gt;</code> puede contener elementos como: <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;datalist&gt;</code>, <code>&lt;output&gt;</code>, <code>&lt;option&gt;</code> y <code>&lt;optgroup&gt;</code>.</p>
+
+<h2>El elemento input</h2>
+<form action="#">
+  <label for="fname">Nombre:</label><br>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>El elemento label</h2>
+<p>Define una etiqueta para varios elementos de formulario. Es útil para lectores de pantalla y facilita hacer clic en elementos pequeños como radios o checkboxes. El atributo <code>for</code> debe coincidir con el <code>id</code> del input para vincularlos.</p>
+
+<h2>El elemento select (lista desplegable)</h2>
+<form action="#">
+  <label for="cars">Elige un carro:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit" value="Enviar">
+</form>
+
+<h3>Opción preseleccionada</h3>
+<form action="#">
+  <label for="cars2">Elige un carro:</label>
+  <select id="cars2" name="cars2">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat" selected>Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit" value="Enviar">
+</form>
+
+<h3>Cantidad de valores visibles (size)</h3>
+<form action="#">
+  <label for="cars3">Elige un carro:</label>
+  <select id="cars3" name="cars3" size="3">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+<h3>Permitir selección múltiple (multiple)</h3>
+<form action="#">
+  <label for="cars4">Elige un carro:</label>
+  <select id="cars4" name="cars4" size="4" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit" value="Enviar">
+</form>
+<p>Mantén presionada la tecla Ctrl (Windows) / Command (Mac) para seleccionar varias opciones.</p>
+
+<h2>El elemento textarea</h2>
+<form action="#">
+  <textarea name="message" rows="10" cols="30">El gato estaba jugando en el jardín.</textarea>
+  <br><br>
+  <input type="submit" value="Enviar">
+</form>
+<p>El atributo <code>rows</code> especifica el número de líneas visibles, y <code>cols</code> el ancho visible del área de texto.</p>
+
+<h3>Textarea con estilo (CSS)</h3>
+<form action="#">
+  <textarea name="message" style="width:200px; height:150px;">El gato estaba jugando en el jardín.</textarea>
+  <br>
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>El elemento button</h2>
+<button type="button" onclick="alert('¡Hola Mundo!')">¡Haz clic aquí!</button>
+<p>Nota: siempre se debe especificar el atributo <code>type</code> del botón, ya que distintos navegadores pueden usar tipos por defecto diferentes.</p>
+
+<h2>Los elementos fieldset y legend</h2>
+<p>El elemento <code>&lt;fieldset&gt;</code> se usa para agrupar datos relacionados en un formulario, y <code>&lt;legend&gt;</code> define un título para ese grupo.</p>
+<form action="#">
+  <fieldset>
+    <legend>Datos personales:</legend>
+    <label for="fname2">Nombre:</label><br>
+    <input type="text" id="fname2" name="fname2" value="Juan"><br>
+    <label for="lname2">Apellido:</label><br>
+    <input type="text" id="lname2" name="lname2" value="Pérez"><br><br>
+    <input type="submit" value="Enviar">
+  </fieldset>
+</form>
+
+<h2>El elemento datalist</h2>
+<p>Especifica una lista de opciones predefinidas para un input. El usuario ve una lista desplegable de sugerencias mientras escribe. El atributo <code>list</code> del input debe coincidir con el <code>id</code> del datalist.</p>
+<form action="#">
+  <label for="navegador">Elige tu navegador:</label>
+  <input list="browsers" id="navegador" name="browser">
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>El elemento output</h2>
+<p>Representa el resultado de un cálculo (como uno realizado por un script). Mueve el control deslizante o cambia el número para ver la suma:</p>
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+</body>
+</html>
