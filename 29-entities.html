@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Entidades HTML</title>
+</head>
+<body>
+
+<h2>¿Qué son las entidades HTML?</h2>
+<p>Algunos caracteres están reservados en HTML. Si usas los signos menor que (&lt;) o mayor que (&gt;) en tu texto, el navegador podría confundirlos con etiquetas.</p>
+<p>Se pueden usar nombres de entidad o números de entidad para mostrar estos caracteres reservados: <code>&amp;entity_name;</code> o <code>&amp;#entity_number;</code>.</p>
+<p>Ejemplo: para mostrar el signo menor que (&lt;) se escribe <code>&amp;lt;</code> o <code>&amp;#60;</code>.</p>
+
+<h2>Espacio de no separación (non-breaking space)</h2>
+<p>Una entidad muy usada es <code>&amp;nbsp;</code>, un espacio que no se separa en una nueva línea. Es útil para mantener juntas dos palabras:</p>
+<p>10&nbsp;km/h</p>
+<p>10&nbsp;PM</p>
+<p>También se usa para evitar que el navegador elimine espacios extra en el texto.</p>
+
+<h2>Entidades HTML más comunes</h2>
+<table style="border-collapse:collapse;">
+  <tr>
+    <th style="border:1px solid black; padding:8px;">Resultado</th>
+    <th style="border:1px solid black; padding:8px;">Descripción</th>
+    <th style="border:1px solid black; padding:8px;">Nombre</th>
+    <th style="border:1px solid black; padding:8px;">Número</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">&nbsp;</td>
+    <td style="border:1px solid black; padding:8px;">espacio de no separación</td>
+    <td style="border:1px solid black; padding:8px;">&amp;nbsp;</td>
+    <td style="border:1px solid black; padding:8px;">&amp;#160;</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">&lt;</td>
+    <td style="border:1px solid black; padding:8px;">menor que</td>
+    <td style="border:1px solid black; padding:8px;">&amp;lt;</td>
+    <td style="border:1px solid black; padding:8px;">&amp;#60;</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">&gt;</td>
+    <td style="border:1px solid black; padding:8px;">mayor que</td>
+    <td style="border:1px solid black; padding:8px;">&amp;gt;</td>
+    <td style="border:1px solid black; padding:8px;">&amp;#62;</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">&amp;</td>
+    <td style="border:1px solid black; padding:8px;">ampersand</td>
+    <td style="border:1px solid black; padding:8px;">&amp;amp;</td>
+    <td style="border:1px solid black; padding:8px;">&amp;#38;</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">&copy;</td>
+    <td style="border:1px solid black; padding:8px;">copyright</td>
+    <td style="border:1px solid black; padding:8px;">&amp;copy;</td>
+    <td style="border:1px solid black; padding:8px;">&amp;#169;</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">&euro;</td>
+    <td style="border:1px solid black; padding:8px;">euro</td>
+    <td style="border:1px solid black; padding:8px;">&amp;euro;</td>
+    <td style="border:1px solid black; padding:8px;">&amp;#8364;</td>
+  </tr>
+</table>
+
+<h2>Marcas diacríticas (Combining Diacritical Marks)</h2>
+<p>Una marca diacrítica es un "glifo" que se agrega a una letra, como el grave o el agudo, también llamados acentos. Se combinan con letras para producir un carácter que no está en el set de caracteres de la página:</p>
+
+<table style="border-collapse:collapse;">
+  <tr>
+    <th style="border:1px solid black; padding:8px;">Marca</th>
+    <th style="border:1px solid black; padding:8px;">Carácter</th>
+    <th style="border:1px solid black; padding:8px;">Construcción</th>
+    <th style="border:1px solid black; padding:8px;">Resultado</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">̀</td>
+    <td style="border:1px solid black; padding:8px;">a</td>
+    <td style="border:1px solid black; padding:8px;">a&amp;#768;</td>
+    <td style="border:1px solid black; padding:8px;">a&#768;</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">́</td>
+    <td style="border:1px solid black; padding:8px;">a</td>
+    <td style="border:1px solid black; padding:8px;">a&amp;#769;</td>
+    <td style="border:1px solid black; padding:8px;">a&#769;</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">̂</td>
+    <td style="border:1px solid black; padding:8px;">a</td>
+    <td style="border:1px solid black; padding:8px;">a&amp;#770;</td>
+    <td style="border:1px solid black; padding:8px;">a&#770;</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">̃</td>
+    <td style="border:1px solid black; padding:8px;">a</td>
+    <td style="border:1px solid black; padding:8px;">a&amp;#771;</td>
+    <td style="border:1px solid black; padding:8px;">a&#771;</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">̀</td>
+    <td style="border:1px solid black; padding:8px;">O</td>
+    <td style="border:1px solid black; padding:8px;">O&amp;#768;</td>
+    <td style="border:1px solid black; padding:8px;">O&#768;</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">́</td>
+    <td style="border:1px solid black; padding:8px;">O</td>
+    <td style="border:1px solid black; padding:8px;">O&amp;#769;</td>
+    <td style="border:1px solid black; padding:8px;">O&#769;</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">̂</td>
+    <td style="border:1px solid black; padding:8px;">O</td>
+    <td style="border:1px solid black; padding:8px;">O&amp;#770;</td>
+    <td style="border:1px solid black; padding:8px;">O&#770;</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">̃</td>
+    <td style="border:1px solid black; padding:8px;">O</td>
+    <td style="border:1px solid black; padding:8px;">O&amp;#771;</td>
+    <td style="border:1px solid black; padding:8px;">O&#771;</td>
+  </tr>
+</table>
+
+</body>
+</html>
