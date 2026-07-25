@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>El Elemento Head en HTML</title>
+<style>
+h1 { color: red; }
+</style>
+<meta charset="UTF-8">
+<meta name="description" content="Práctica de HTML sobre el elemento head">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="Kimberly">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+function saludar() {
+  document.getElementById("demo").innerHTML = "¡Hola JavaScript!";
+}
+</script>
+</head>
+<body>
+
+<h2>El elemento title</h2>
+<p>El título se define en el <code>&lt;head&gt;</code> y se muestra en la pestaña del navegador, en favoritos y en resultados de buscadores. En este archivo, el título es "El Elemento Head en HTML" (revisa la pestaña de tu navegador).</p>
+
+<h2>El elemento style</h2>
+<p>Permite definir estilos CSS directamente en la página. En este archivo se usó para poner en rojo el siguiente encabezado:</p>
+<h1>Este es un encabezado en rojo</h1>
+
+<h2>El elemento link</h2>
+<p>Se usa para enlazar hojas de estilo externas. Así se vería en el head:</p>
+<pre><code>&lt;link rel="stylesheet" href="mystyle.css"&gt;</code></pre>
+
+<h2>El elemento meta</h2>
+<p>Define información sobre la página que no se muestra visualmente, pero que usan navegadores y buscadores. En este archivo ya se incluyeron en el head: charset (UTF-8), descripción, palabras clave, autor y viewport.</p>
+
+<h3>La etiqueta viewport</h3>
+<p>Controla cómo se ve la página en distintos dispositivos. Se incluyó en el head de este archivo:</p>
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+
+<h2>El elemento script</h2>
+<p>Permite definir JavaScript del lado del cliente. La función de este ejemplo ya está cargada en el head de este archivo:</p>
+<p id="demo">Un párrafo de ejemplo.</p>
+<button type="button" onclick="saludar()">Probar</button>
+
+<h2>El elemento base</h2>
+<p>Define la URL base y/o el destino por defecto para todos los enlaces relativos de la página. Solo puede haber un <code>&lt;base&gt;</code> por documento. No se agregó de forma funcional en este archivo porque afectaría todos los demás enlaces de la página, pero así se vería:</p>
+<pre><code>&lt;base href="https://www.w3schools.com/" target="_blank"&gt;</code></pre>
+
+</body>
+</html>
