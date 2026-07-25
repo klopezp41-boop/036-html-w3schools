@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>URLs en HTML</title>
+</head>
+<body>
+
+<h2>¿Qué es una URL?</h2>
+<p>Una URL es otra forma de decir "dirección web". Puede estar compuesta de palabras (como w3schools.com) o de una dirección IP (como 192.68.20.50). La mayoría de personas usan nombres porque son más fáciles de recordar que números.</p>
+
+<h2>Sintaxis de una URL</h2>
+<p>Una dirección web como <code>https://www.w3schools.com/html/default.asp</code> sigue esta estructura:</p>
+<pre><code>scheme://prefix.domain:port/path/filename</code></pre>
+<ul>
+  <li><b>scheme</b> - define el tipo de servicio de internet (el más común es http o https)</li>
+  <li><b>prefix</b> - define un prefijo de dominio (por defecto en http es www)</li>
+  <li><b>domain</b> - define el nombre de dominio (como w3schools.com)</li>
+  <li><b>port</b> - define el número de puerto en el servidor (por defecto en http es 80)</li>
+  <li><b>path</b> - define una ruta en el servidor (si se omite, se usa el directorio raíz)</li>
+  <li><b>filename</b> - define el nombre del documento o recurso</li>
+</ul>
+
+<h2>Esquemas de URL comunes</h2>
+<table style="border-collapse:collapse;">
+  <tr>
+    <th style="border:1px solid black; padding:8px;">Esquema</th>
+    <th style="border:1px solid black; padding:8px;">Significado</th>
+    <th style="border:1px solid black; padding:8px;">Se usa para</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">http</td>
+    <td style="border:1px solid black; padding:8px;">HyperText Transfer Protocol</td>
+    <td style="border:1px solid black; padding:8px;">Páginas web comunes. No encriptado</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">https</td>
+    <td style="border:1px solid black; padding:8px;">Secure HyperText Transfer Protocol</td>
+    <td style="border:1px solid black; padding:8px;">Páginas web seguras. Encriptado</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">ftp</td>
+    <td style="border:1px solid black; padding:8px;">File Transfer Protocol</td>
+    <td style="border:1px solid black; padding:8px;">Descargar o subir archivos</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">file</td>
+    <td style="border:1px solid black; padding:8px;">-</td>
+    <td style="border:1px solid black; padding:8px;">Un archivo en tu computadora</td>
+  </tr>
+</table>
+
+<h2>Codificación de URL (URL Encoding)</h2>
+<p>Las URLs solo se pueden enviar por internet usando el set de caracteres ASCII. Si una URL contiene caracteres fuera de ese set, debe convertirse.</p>
+<p>La codificación de URL reemplaza los caracteres que no son ASCII con un símbolo "%" seguido de dígitos hexadecimales. Las URLs no pueden contener espacios: normalmente se reemplazan con un signo "+" o con "%20".</p>
+
+<h3>Pruébalo tú mismo</h3>
+<p>Si escribes algo con caracteres especiales y das clic en "Enviar", el navegador codificaría el texto antes de enviarlo al servidor:</p>
+<form action="#" method="get">
+  <label for="texto">Texto de ejemplo: </label>
+  <input type="text" id="texto" name="texto" value="Hola Günter">
+  <button type="submit">Enviar</button>
+</form>
+
+<h2>Ejemplos de codificación ASCII</h2>
+<p>El navegador codifica la entrada según el set de caracteres usado en la página. El set de caracteres por defecto en HTML5 es UTF-8.</p>
+<table style="border-collapse:collapse;">
+  <tr>
+    <th style="border:1px solid black; padding:8px;">Carácter</th>
+    <th style="border:1px solid black; padding:8px;">Desde Windows-1252</th>
+    <th style="border:1px solid black; padding:8px;">Desde UTF-8</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">€</td>
+    <td style="border:1px solid black; padding:8px;">%80</td>
+    <td style="border:1px solid black; padding:8px;">%E2%82%AC</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">£</td>
+    <td style="border:1px solid black; padding:8px;">%A3</td>
+    <td style="border:1px solid black; padding:8px;">%C2%A3</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">©</td>
+    <td style="border:1px solid black; padding:8px;">%A9</td>
+    <td style="border:1px solid black; padding:8px;">%C2%A9</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">®</td>
+    <td style="border:1px solid black; padding:8px;">%AE</td>
+    <td style="border:1px solid black; padding:8px;">%C2%AE</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">À</td>
+    <td style="border:1px solid black; padding:8px;">%C0</td>
+    <td style="border:1px solid black; padding:8px;">%C3%80</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">Á</td>
+    <td style="border:1px solid black; padding:8px;">%C1</td>
+    <td style="border:1px solid black; padding:8px;">%C3%81</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">Â</td>
+    <td style="border:1px solid black; padding:8px;">%C2</td>
+    <td style="border:1px solid black; padding:8px;">%C3%82</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">Ã</td>
+    <td style="border:1px solid black; padding:8px;">%C3</td>
+    <td style="border:1px solid black; padding:8px;">%C3%83</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">Ä</td>
+    <td style="border:1px solid black; padding:8px;">%C4</td>
+    <td style="border:1px solid black; padding:8px;">%C3%84</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">Å</td>
+    <td style="border:1px solid black; padding:8px;">%C5</td>
+    <td style="border:1px solid black; padding:8px;">%C3%85</td>
+  </tr>
+</table>
+
+</body>
+</html>
