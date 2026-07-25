@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Tipos de Input en HTML</title>
+</head>
+<body>
+
+<h2>Tipos de input disponibles</h2>
+<p>Existen muchos tipos de input en HTML: button, checkbox, color, date, datetime-local, email, file, hidden, image, month, number, password, radio, range, reset, search, submit, tel, text, time, url, week. Por defecto, si no se especifica, el tipo es "text".</p>
+
+<h2>Tipo texto</h2>
+<form action="#">
+  <label for="fname">Nombre:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Apellido:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+<p>El ancho por defecto de un campo de texto es de 20 caracteres.</p>
+
+<h2>Tipo contraseña (password)</h2>
+<form action="#">
+  <label for="username">Usuario:</label><br>
+  <input type="text" id="username" name="username"><br>
+  <label for="pwd">Contraseña:</label><br>
+  <input type="password" id="pwd" name="pwd"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+<p>Los caracteres de un campo de contraseña se ocultan (se muestran como asteriscos o círculos).</p>
+
+<h2>Tipo submit (enviar)</h2>
+<form action="#">
+  <label for="fname2">Nombre:</label><br>
+  <input type="text" id="fname2" name="fname2" value="Juan"><br>
+  <label for="lname2">Apellido:</label><br>
+  <input type="text" id="lname2" name="lname2" value="Pérez"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Tipo reset</h2>
+<form action="#">
+  <label for="fname3">Nombre:</label><br>
+  <input type="text" id="fname3" name="fname3" value="Juan"><br>
+  <label for="lname3">Apellido:</label><br>
+  <input type="text" id="lname3" name="lname3" value="Pérez"><br><br>
+  <input type="submit" value="Enviar">
+  <input type="reset" value="Restablecer">
+</form>
+<p>Si cambias los valores y haces clic en "Restablecer", el formulario vuelve a sus valores por defecto.</p>
+
+<h2>Tipo radio</h2>
+<p>Elige tu lenguaje web favorito:</p>
+<form action="#">
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Tipo checkbox</h2>
+<form action="#">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bici">
+  <label for="vehicle1"> Tengo una bicicleta</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Carro">
+  <label for="vehicle2"> Tengo un carro</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Bote">
+  <label for="vehicle3"> Tengo un bote</label><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Tipo button</h2>
+<input type="button" onclick="alert('¡Hola Mundo!')" value="¡Haz clic aquí!">
+
+<h2>Tipo color</h2>
+<form action="#">
+  <label for="favcolor">Elige tu color favorito:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Tipo date</h2>
+<form action="#">
+  <label for="birthday">Cumpleaños:</label>
+  <input type="date" id="birthday" name="birthday">
+  <input type="submit" value="Enviar">
+</form>
+
+<h3>Restricciones de fecha (min y max)</h3>
+<form action="#">
+  <label for="datemin">Ingresa una fecha después del 2000-01-01:</label>
+  <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+  <label for="datemax">Ingresa una fecha antes del 1980-01-01:</label>
+  <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Tipo datetime-local</h2>
+<form action="#">
+  <label for="birthdaytime">Cumpleaños (fecha y hora):</label>
+  <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Tipo email</h2>
+<form action="#">
+  <label for="email">Correo electrónico:</label>
+  <input type="email" id="email" name="email">
+  <input type="submit" value="Enviar">
+</form>
+<p>Dependiendo del navegador, el correo puede validarse automáticamente al enviarse.</p>
+
+<h2>Tipo image</h2>
+<form action="#">
+  <label for="fname4">Nombre: </label>
+  <input type="text" id="fname4" name="fname4"><br><br>
+  <label for="lname4">Apellido: </label>
+  <input type="text" id="lname4" name="lname4"><br><br>
+  <input type="image" src="https://www.w3schools.com/html/img_submit.gif" alt="Enviar" width="48" height="48">
+</form>
+<p>El input type="image" envía las coordenadas X e Y del clic que activó el botón.</p>
+
+<h2>Tipo file</h2>
+<form action="#">
+  <label for="myfile">Selecciona un archivo:</label>
+  <input type="file" id="myfile" name="myfile"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Tipo hidden</h2>
+<form action="#">
+  <label for="fname5">Nombre:</label>
+  <input type="text" id="fname5" name="fname5"><br><br>
+  <input type="hidden" id="custId" name="custId" value="3487">
+  <input type="submit" value="Enviar">
+</form>
+<p>El campo oculto no se muestra al usuario, pero su valor sí se envía junto con el formulario (revisa el código fuente para verlo).</p>
+
+<h2>Tipo month</h2>
+<form action="#">
+  <label for="bdaymonth">Cumpleaños (mes y año):</label>
+  <input type="month" id="bdaymonth" name="bdaymonth">
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Tipo number</h2>
+<form action="#">
+  <label for="quantity">Cantidad (entre 1 y 5):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5">
+  <input type="submit" value="Enviar">
+</form>
+
+<h3>Con intervalos fijos (step)</h3>
+<form action="#">
+  <label for="quantity2">Cantidad:</label>
+  <input type="number" id="quantity2" name="quantity2" min="0" max="100" step="10" value="30">
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Restricciones comunes para inputs</h2>
+<table style="border-collapse:collapse;">
+  <tr>
+    <th style="border:1px solid black; padding:8px;">Atributo</th>
+    <th style="border:1px solid black; padding:8px;">Descripción</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">checked</td>
+    <td style="border:1px solid black; padding:8px;">Preselecciona un checkbox o radio al cargar la página</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">disabled</td>
+    <td style="border:1px solid black; padding:8px;">Deshabilita el campo</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">max / min</td>
+    <td style="border:1px solid black; padding:8px;">Valor máximo / mínimo permitido</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">maxlength</td>
+    <td style="border:1px solid black; padding:8px;">Número máximo de caracteres</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">pattern</td>
+    <td style="border:1px solid black; padding:8px;">Expresión regular para validar el valor</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">readonly</td>
+    <td style="border:1px solid black; padding:8px;">El campo no se puede modificar</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">required</td>
+    <td style="border:1px solid black; padding:8px;">El campo es obligatorio</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">size</td>
+    <td style="border:1px solid black; padding:8px;">Ancho del campo en caracteres</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">step</td>
+    <td style="border:1px solid black; padding:8px;">Intervalos numéricos permitidos</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">value</td>
+    <td style="border:1px solid black; padding:8px;">Valor por defecto</td>
+  </tr>
+</table>
+
+<h2>Tipo range</h2>
+<form action="#" method="get">
+  <label for="vol">Volumen (entre 0 y 50):</label>
+  <input type="range" id="vol" name="vol" min="0" max="50">
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Tipo search</h2>
+<form action="#">
+  <label for="gsearch">Buscar en Google:</label>
+  <input type="search" id="gsearch" name="gsearch">
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Tipo tel</h2>
+<form action="#">
+  <label for="tel">Número de teléfono:</label>
+  <input type="tel" id="tel" name="tel" placeholder="1234-5678">
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Tipo time</h2>
+<form action="#">
+  <label for="appt">Selecciona una hora:</label>
+  <input type="time" id="appt" name="appt">
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Tipo url</h2>
+<form action="#">
+  <label for="url">Sitio web:</label>
+  <input type="url" id="url" name="url" placeholder="https://ejemplo.com">
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Tipo week</h2>
+<form action="#">
+  <label for="week">Selecciona una semana:</label>
+  <input type="week" id="week" name="week">
+  <input type="submit" value="Enviar">
+</form>
+
+</body>
+</html>
