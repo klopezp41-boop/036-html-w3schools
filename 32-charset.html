@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Codificación HTML (Character Sets)</title>
+</head>
+<body>
+
+<h2>El atributo charset</h2>
+<p>Para mostrar una página correctamente, el navegador debe saber qué set de caracteres usar. Se especifica en la etiqueta meta (ya incluida en el head de este archivo):</p>
+<pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+<p>La especificación de HTML recomienda a los desarrolladores usar el set de caracteres UTF-8, ya que cubre casi todos los caracteres y símbolos del mundo.</p>
+
+<h2>El set de caracteres ASCII</h2>
+<p>ASCII fue el primer estándar de codificación de caracteres para la web. Definió 128 caracteres latinos distintos que se podían usar en internet:</p>
+<ul>
+  <li>Letras en inglés (a-z y A-Z)</li>
+  <li>Números (0-9)</li>
+  <li>Algunos caracteres especiales: ! $ + - ( ) @ &lt; &gt; . # ?</li>
+</ul>
+
+<h2>El set de caracteres ANSI</h2>
+<p>ANSI (Windows-1252) fue el primer set de caracteres de Windows:</p>
+<ul>
+  <li>Idéntico a ASCII en los primeros 127 caracteres</li>
+  <li>Caracteres especiales del 128 al 159</li>
+  <li>Idéntico a UTF-8 del 160 al 255</li>
+</ul>
+<pre><code>&lt;meta charset="Windows-1252"&gt;</code></pre>
+
+<h2>El set de caracteres ISO-8859-1</h2>
+<p>Fue el set de caracteres por defecto en HTML 4. Soportaba 256 caracteres:</p>
+<ul>
+  <li>Idéntico a ASCII en los primeros 127 caracteres</li>
+  <li>No usa los caracteres del 128 al 159</li>
+  <li>Idéntico a ANSI y UTF-8 del 160 al 255</li>
+</ul>
+
+<h3>Ejemplo en HTML 4</h3>
+<pre><code>&lt;meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"&gt;</code></pre>
+
+<h3>Ejemplo en HTML 5</h3>
+<pre><code>&lt;meta charset="ISO-8859-1"&gt;</code></pre>
+
+<h2>El set de caracteres UTF-8</h2>
+<ul>
+  <li>Idéntico a ASCII en los valores del 0 al 127</li>
+  <li>No usa los caracteres del 128 al 159</li>
+  <li>Idéntico a ANSI y 8859-1 del 160 al 255</li>
+  <li>Continúa desde el valor 256 hasta 10,000 caracteres</li>
+</ul>
+<pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+
+</body>
+</html>
