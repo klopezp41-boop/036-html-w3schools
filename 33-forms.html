@@ -1,125 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>URLs en HTML</title>
+<title>Formularios en HTML</title>
 </head>
 <body>
 
-<h2>¿Qué es una URL?</h2>
-<p>Una URL es otra forma de decir "dirección web". Puede estar compuesta de palabras (como w3schools.com) o de una dirección IP (como 192.68.20.50). La mayoría de personas usan nombres porque son más fáciles de recordar que números.</p>
+<h2>Formulario básico</h2>
+<form action="#">
+  <label for="fname">Nombre:</label><br>
+  <input type="text" id="fname" name="fname" value="Juan"><br>
+  <label for="lname">Apellido:</label><br>
+  <input type="text" id="lname" name="lname" value="Pérez"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+<p>Si haces clic en "Enviar", los datos del formulario se enviarían a la página especificada en el atributo action.</p>
 
-<h2>Sintaxis de una URL</h2>
-<p>Una dirección web como <code>https://www.w3schools.com/html/default.asp</code> sigue esta estructura:</p>
-<pre><code>scheme://prefix.domain:port/path/filename</code></pre>
-<ul>
-  <li><b>scheme</b> - define el tipo de servicio de internet (el más común es http o https)</li>
-  <li><b>prefix</b> - define un prefijo de dominio (por defecto en http es www)</li>
-  <li><b>domain</b> - define el nombre de dominio (como w3schools.com)</li>
-  <li><b>port</b> - define el número de puerto en el servidor (por defecto en http es 80)</li>
-  <li><b>path</b> - define una ruta en el servidor (si se omite, se usa el directorio raíz)</li>
-  <li><b>filename</b> - define el nombre del documento o recurso</li>
-</ul>
+<h2>El elemento form</h2>
+<p>El elemento <code>&lt;form&gt;</code> es un contenedor para distintos tipos de elementos de entrada: campos de texto, casillas de verificación, botones de opción, botones de envío, etc.</p>
 
-<h2>Esquemas de URL comunes</h2>
+<h2>El elemento input</h2>
+<p>Es el elemento de formulario más usado. Puede mostrarse de muchas formas según su atributo type:</p>
 <table style="border-collapse:collapse;">
   <tr>
-    <th style="border:1px solid black; padding:8px;">Esquema</th>
-    <th style="border:1px solid black; padding:8px;">Significado</th>
-    <th style="border:1px solid black; padding:8px;">Se usa para</th>
+    <th style="border:1px solid black; padding:8px;">Tipo</th>
+    <th style="border:1px solid black; padding:8px;">Descripción</th>
   </tr>
   <tr>
-    <td style="border:1px solid black; padding:8px;">http</td>
-    <td style="border:1px solid black; padding:8px;">HyperText Transfer Protocol</td>
-    <td style="border:1px solid black; padding:8px;">Páginas web comunes. No encriptado</td>
+    <td style="border:1px solid black; padding:8px;"><code>&lt;input type="text"&gt;</code></td>
+    <td style="border:1px solid black; padding:8px;">Muestra un campo de texto de una línea</td>
   </tr>
   <tr>
-    <td style="border:1px solid black; padding:8px;">https</td>
-    <td style="border:1px solid black; padding:8px;">Secure HyperText Transfer Protocol</td>
-    <td style="border:1px solid black; padding:8px;">Páginas web seguras. Encriptado</td>
+    <td style="border:1px solid black; padding:8px;"><code>&lt;input type="radio"&gt;</code></td>
+    <td style="border:1px solid black; padding:8px;">Muestra un botón de opción (para elegir una entre varias opciones)</td>
   </tr>
   <tr>
-    <td style="border:1px solid black; padding:8px;">ftp</td>
-    <td style="border:1px solid black; padding:8px;">File Transfer Protocol</td>
-    <td style="border:1px solid black; padding:8px;">Descargar o subir archivos</td>
+    <td style="border:1px solid black; padding:8px;"><code>&lt;input type="checkbox"&gt;</code></td>
+    <td style="border:1px solid black; padding:8px;">Muestra una casilla de verificación (para elegir cero o más opciones)</td>
   </tr>
   <tr>
-    <td style="border:1px solid black; padding:8px;">file</td>
-    <td style="border:1px solid black; padding:8px;">-</td>
-    <td style="border:1px solid black; padding:8px;">Un archivo en tu computadora</td>
+    <td style="border:1px solid black; padding:8px;"><code>&lt;input type="submit"&gt;</code></td>
+    <td style="border:1px solid black; padding:8px;">Muestra un botón para enviar el formulario</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;"><code>&lt;input type="button"&gt;</code></td>
+    <td style="border:1px solid black; padding:8px;">Muestra un botón normal</td>
   </tr>
 </table>
 
-<h2>Codificación de URL (URL Encoding)</h2>
-<p>Las URLs solo se pueden enviar por internet usando el set de caracteres ASCII. Si una URL contiene caracteres fuera de ese set, debe convertirse.</p>
-<p>La codificación de URL reemplaza los caracteres que no son ASCII con un símbolo "%" seguido de dígitos hexadecimales. Las URLs no pueden contener espacios: normalmente se reemplazan con un signo "+" o con "%20".</p>
+<h2>Campos de texto</h2>
+<form action="#">
+  <label for="fname2">Nombre:</label><br>
+  <input type="text" id="fname2" name="fname2" value="Juan"><br>
+  <label for="lname2">Apellido:</label><br>
+  <input type="text" id="lname2" name="lname2" value="Pérez">
+</form>
+<p>El formulario en sí no se ve visualmente, y el ancho por defecto de un campo de texto es de 20 caracteres.</p>
 
-<h3>Pruébalo tú mismo</h3>
-<p>Si escribes algo con caracteres especiales y das clic en "Enviar", el navegador codificaría el texto antes de enviarlo al servidor:</p>
-<form action="#" method="get">
-  <label for="texto">Texto de ejemplo: </label>
-  <input type="text" id="texto" name="texto" value="Hola Günter">
-  <button type="submit">Enviar</button>
+<h2>El elemento label</h2>
+<p>La etiqueta <code>&lt;label&gt;</code> define una etiqueta para varios elementos de formulario. Es útil para lectores de pantalla y también facilita hacer clic en casillas o botones de opción pequeños, ya que hacer clic en el texto del label activa el input asociado. El atributo <code>for</code> del label debe coincidir con el <code>id</code> del input para vincularlos.</p>
+
+<h2>Botones de opción (radio)</h2>
+<p>Permiten al usuario elegir UNA opción entre varias:</p>
+<p>Elige tu lenguaje web favorito:</p>
+<form action="#">
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
 </form>
 
-<h2>Ejemplos de codificación ASCII</h2>
-<p>El navegador codifica la entrada según el set de caracteres usado en la página. El set de caracteres por defecto en HTML5 es UTF-8.</p>
-<table style="border-collapse:collapse;">
-  <tr>
-    <th style="border:1px solid black; padding:8px;">Carácter</th>
-    <th style="border:1px solid black; padding:8px;">Desde Windows-1252</th>
-    <th style="border:1px solid black; padding:8px;">Desde UTF-8</th>
-  </tr>
-  <tr>
-    <td style="border:1px solid black; padding:8px;">€</td>
-    <td style="border:1px solid black; padding:8px;">%80</td>
-    <td style="border:1px solid black; padding:8px;">%E2%82%AC</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid black; padding:8px;">£</td>
-    <td style="border:1px solid black; padding:8px;">%A3</td>
-    <td style="border:1px solid black; padding:8px;">%C2%A3</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid black; padding:8px;">©</td>
-    <td style="border:1px solid black; padding:8px;">%A9</td>
-    <td style="border:1px solid black; padding:8px;">%C2%A9</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid black; padding:8px;">®</td>
-    <td style="border:1px solid black; padding:8px;">%AE</td>
-    <td style="border:1px solid black; padding:8px;">%C2%AE</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid black; padding:8px;">À</td>
-    <td style="border:1px solid black; padding:8px;">%C0</td>
-    <td style="border:1px solid black; padding:8px;">%C3%80</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid black; padding:8px;">Á</td>
-    <td style="border:1px solid black; padding:8px;">%C1</td>
-    <td style="border:1px solid black; padding:8px;">%C3%81</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid black; padding:8px;">Â</td>
-    <td style="border:1px solid black; padding:8px;">%C2</td>
-    <td style="border:1px solid black; padding:8px;">%C3%82</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid black; padding:8px;">Ã</td>
-    <td style="border:1px solid black; padding:8px;">%C3</td>
-    <td style="border:1px solid black; padding:8px;">%C3%83</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid black; padding:8px;">Ä</td>
-    <td style="border:1px solid black; padding:8px;">%C4</td>
-    <td style="border:1px solid black; padding:8px;">%C3%84</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid black; padding:8px;">Å</td>
-    <td style="border:1px solid black; padding:8px;">%C5</td>
-    <td style="border:1px solid black; padding:8px;">%C3%85</td>
-  </tr>
-</table>
+<h2>Casillas de verificación (checkbox)</h2>
+<p>Permiten al usuario elegir CERO o MÁS opciones entre varias:</p>
+<form action="#">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bici">
+  <label for="vehicle1"> Tengo una bicicleta</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Carro">
+  <label for="vehicle2"> Tengo un carro</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Bote">
+  <label for="vehicle3"> Tengo un bote</label><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>El botón de envío (submit)</h2>
+<p>El elemento <code>&lt;input type="submit"&gt;</code> define un botón para enviar los datos del formulario a un manejador de formulario, especificado en el atributo action.</p>
+<form action="#">
+  <label for="fname3">Nombre:</label><br>
+  <input type="text" id="fname3" name="fname3" value="Juan"><br>
+  <label for="lname3">Apellido:</label><br>
+  <input type="text" id="lname3" name="lname3" value="Pérez"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>El atributo name en input</h2>
+<p>Cada campo de entrada debe tener un atributo <code>name</code> para que su valor se envíe. Si se omite, el valor del campo no se enviará.</p>
+<form action="#">
+  <label for="fname4">Nombre:</label><br>
+  <input type="text" id="fname4" value="Juan"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+<p>Nota: el valor del campo "Nombre" en este último ejemplo no se enviaría, porque el input no tiene atributo name.</p>
 
 </body>
 </html>
